@@ -1,0 +1,5 @@
+instructions:
+  - "This repository uses @github/spec-kit to check for standards and best practices."
+  - "Before making changes, run `npx spec-kit check` to make sure everything is correct."
+  - "Changes must pass automatic checks run by GitHub Actions before they can be merged."
+  - "For help, see the README or open an onboarding issue."
