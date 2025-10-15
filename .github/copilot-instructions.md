@@ -43,6 +43,11 @@ This is a **local-first TypeScript library** (NOT a REST API server):
 
 ```
 agentic-os/
+├── .github/                 # GitHub configuration (workflows, templates, etc.)
+├── README.md                # Main documentation
+└── LICENSE                  # License file
+
+# Future structure (as described in README.md):
 ├── mod.ts                   # Main library entry point
 ├── src/
 │   ├── core/                # Core logic (template engine, etc.)
@@ -54,10 +59,11 @@ agentic-os/
 ## Code Standards & Best Practices
 
 ### Testing Requirements
-- **Test-Driven Development**: Maintain >80% test coverage (per constitution.md)
+- **Test-Driven Development**: Aim for >80% test coverage (target from README.md)
 - Use Deno.test for all tests
 - Tests require explicit permissions: `--allow-read --allow-write`
 - All tests must pass before committing changes
+- Create test infrastructure as project develops
 
 ### Permissions Model
 - Deno requires explicit permissions for security
@@ -82,13 +88,13 @@ agentic-os/
 
 This project follows **Specification-Driven Development (SDD)**:
 
-1. All changes must start with a specification in `specs/`
+1. All changes should start with a specification in `specs/` (when the directory exists)
 2. Generate implementation plan in `plan.md`
 3. Create task breakdown in `tasks.md`
 4. Implement following tasks sequentially
 5. Maintain complete traceability
 
-See `memory/constitution.md` for project governance (7 core principles).
+Refer to project documentation for governance principles as they are established.
 
 ## Key Constraints
 
@@ -102,12 +108,12 @@ See `memory/constitution.md` for project governance (7 core principles).
 ## Common Tasks
 
 ### Adding a new feature
-1. Create specification in `specs/`
+1. Create specification in `specs/` directory (create if it doesn't exist)
 2. Update `plan.md` and `tasks.md`
 3. Write tests first (TDD approach)
 4. Implement feature
 5. Run tests: `deno test --allow-read --allow-write`
-6. Check types: `deno check mod.ts`
+6. Check types: `deno check mod.ts` (once mod.ts exists)
 7. Lint: `deno lint`
 8. Format: `deno fmt`
 
@@ -120,11 +126,10 @@ See `memory/constitution.md` for project governance (7 core principles).
 
 ## Important Files
 
-- `mod.ts`: Main entry point - exports public API
-- `memory/constitution.md`: Project governance principles
-- `specs/`: All specifications for features
-- `README.md`: Main documentation
-- `CLAUDE.md` and `HANDOVER.md`: Additional documentation
+- `README.md`: Main documentation describing the project vision and architecture
+- `.github/`: GitHub configuration including workflows and templates
+
+**Note**: This project is in early stages. Files referenced in README.md like `mod.ts`, `src/`, `tests/`, and specification directories will be created as development progresses.
 
 ## Migration Context
 
