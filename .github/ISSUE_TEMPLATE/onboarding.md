@@ -2,7 +2,7 @@
 name: Onboarding Guide
 about: Instructions for new contributors and Copilot agents
 title: 'Onboarding: Welcome to Agentic-OS'
-labels: documentation, onboarding
+labels: [documentation, onboarding]
 assignees: ''
 
 ---
