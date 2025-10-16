@@ -138,7 +138,7 @@ This is a **local-first TypeScript library** (NOT a REST API server):
 
 - Refer to the [README](../README.md) for architecture and governance details
 - Review [copilot-instructions.md](.github/copilot-instructions.md) for development guidelines
-- Review [copilot-agent.yml](.github/copilot-agent.yml) for agent rules
+- Review [copilot-agent.yml](../copilot-agent.yml) for agent rules
 - For questions, comment on this issue or open a new discussion
 
 ## Migration Context
