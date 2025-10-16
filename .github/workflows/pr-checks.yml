@@ -32,6 +32,9 @@ jobs:
           else
             echo "mod.ts not found, skipping type check"
           fi
+          if [ -d src ]; then
+            deno check $(find src -type f -name "*.ts")
+          fi
 
       - name: Run tests
         run: |
