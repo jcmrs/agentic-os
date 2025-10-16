@@ -1,10 +1,15 @@
 # Agentic-OS Local Library (Deno SDK)
 
-A modern, secure, local-first TypeScript library for orchestrating agentic development workflows. Built with Deno to eliminate npm complexity and security vulnerabilities.
+A modern, secure, local-first TypeScript library for orchestrating agentic
+development workflows. Built with Deno to eliminate npm complexity and security
+vulnerabilities.
 
 ## Architecture
 
-This library is a 100% local, serverless TypeScript SDK designed to be used directly by AI assistants or other developer tools. It contains all the logic for managing profiles, compiling agent prompts, and executing the Specification-Driven Development methodology.
+This library is a 100% local, serverless TypeScript SDK designed to be used
+directly by AI assistants or other developer tools. It contains all the logic
+for managing profiles, compiling agent prompts, and executing the
+Specification-Driven Development methodology.
 
 **Key Features:**
 
@@ -16,12 +21,11 @@ This library is a 100% local, serverless TypeScript SDK designed to be used dire
 
 ## Technology Stack
 
-**Runtime:** Deno 1.40+
-**Language:** TypeScript
-**Testing:** Deno.test (built-in)
-**Dependencies:** Deno standard library only
+**Runtime:** Deno 1.40+ **Language:** TypeScript **Testing:** Deno.test
+(built-in) **Dependencies:** Deno standard library only
 
-**Migration Note:** This project migrated from Node.js/npm to Deno on 2025-10-15 to eliminate npm security issues and dependency management complexity.
+**Migration Note:** This project migrated from Node.js/npm to Deno on 2025-10-15
+to eliminate npm security issues and dependency management complexity.
 
 ## Installation
 
@@ -52,7 +56,8 @@ import * as AgenticOS from "./mod.ts";
 - **Profiles**: Self-contained sets of commands, standards, and workflows
 - **Commands**: Structured prompts that guide an AI through a task
 - **Standards**: Best practice documents injected into prompts
-- **Template Expansion**: Recursive compilation of commands, workflows, and standards into final prompts for AI consumption
+- **Template Expansion**: Recursive compilation of commands, workflows, and
+  standards into final prompts for AI consumption
 
 ## Public API
 
@@ -198,8 +203,8 @@ const prompt = await compileCommand("./path/to/command.md");
 
 ## Development Status
 
-**Current Phase:** Phase 6 (Polish & Finalization)
-**Methodology:** Specification-Driven Development (Spec Kit)
+**Current Phase:** Phase 6 (Polish & Finalization) **Methodology:**
+Specification-Driven Development (Spec Kit)
 
 **Completed Phases:**
 
@@ -215,7 +220,8 @@ const prompt = await compileCommand("./path/to/command.md");
 - 13 tests for TemplateExpander (core engine)
 - 17 tests for Content Management (CRUD operations)
 
-See `specs/001-feature-refactor-agent/tasks.md` for detailed implementation tasks.
+See `specs/001-feature-refactor-agent/tasks.md` for detailed implementation
+tasks.
 
 ## Architecture Decisions
 
@@ -236,11 +242,13 @@ See `specs/001-feature-refactor-agent/tasks.md` for detailed implementation task
 - Fragile dependency trees
 - Package manager overhead
 
-This decision follows Spec Kit Use Case #2 (Technology Stack Change) where specifications remain unchanged while implementation details are updated.
+This decision follows Spec Kit Use Case #2 (Technology Stack Change) where
+specifications remain unchanged while implementation details are updated.
 
 ## Contributing
 
-This project follows strict Specification-Driven Development (SDD). All changes must:
+This project follows strict Specification-Driven Development (SDD). All changes
+must:
 
 1. Start with a specification in `specs/`
 2. Generate implementation plan in `plan.md`
@@ -248,7 +256,8 @@ This project follows strict Specification-Driven Development (SDD). All changes 
 4. Implement following tasks sequentially
 5. Maintain complete traceability
 
-See `memory/constitution.md` for project governance (7 core principles including Test-Driven Development >80% coverage requirement).
+See `memory/constitution.md` for project governance (7 core principles including
+Test-Driven Development >80% coverage requirement).
 
 ## License
 
@@ -263,4 +272,6 @@ See `memory/constitution.md` for project governance (7 core principles including
 
 ---
 
-**Note:** This is a local library, NOT an HTTP REST API server. It provides a programmatic API through TypeScript function exports, consumed directly by AI assistants via imports.
+**Note:** This is a local library, NOT an HTTP REST API server. It provides a
+programmatic API through TypeScript function exports, consumed directly by AI
+assistants via imports.

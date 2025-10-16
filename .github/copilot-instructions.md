@@ -3,6 +3,7 @@
 ## Technology Stack
 
 This project is built with:
+
 - **Runtime**: Deno 1.40+
 - **Language**: TypeScript (native, no build step required)
 - **Testing**: Deno.test (built-in)
@@ -34,6 +35,7 @@ deno fmt --check
 ## Project Architecture
 
 This is a **local-first TypeScript library** (NOT a REST API server):
+
 - 100% local, serverless SDK
 - Designed for direct consumption by AI assistants
 - No HTTP endpoints or server components
@@ -59,13 +61,16 @@ agentic-os/
 ## Code Standards & Best Practices
 
 ### Testing Requirements
-- **Test-Driven Development**: Aim for >80% test coverage (target from README.md)
+
+- **Test-Driven Development**: Aim for >80% test coverage (target from
+  README.md)
 - Use Deno.test for all tests
 - Tests require explicit permissions: `--allow-read --allow-write`
 - All tests must pass before committing changes
 - Create test infrastructure as project develops
 
 ### Permissions Model
+
 - Deno requires explicit permissions for security
 - Common permissions needed:
   - `--allow-read`: For reading configuration files and profiles
@@ -73,12 +78,14 @@ agentic-os/
   - `--allow-env`: For environment variable access (optional)
 
 ### Code Style
+
 - Use TypeScript's strict mode
 - Follow Deno's standard formatting (enforced by `deno fmt`)
 - No comments unless matching existing style or explaining complex logic
 - Use existing libraries from Deno standard library when possible
 
 ### Dependencies
+
 - **ZERO npm dependencies** - This is a core principle
 - Only use Deno standard library
 - Do not add external dependencies unless absolutely critical
@@ -88,13 +95,15 @@ agentic-os/
 
 This project follows **Specification-Driven Development (SDD)**:
 
-1. All changes should start with a specification in `specs/` (when the directory exists)
+1. All changes should start with a specification in `specs/` (when the directory
+   exists)
 2. Generate implementation plan in `plan.md`
 3. Create task breakdown in `tasks.md`
 4. Implement following tasks sequentially
 5. Maintain complete traceability
 
-Refer to project documentation for governance principles as they are established.
+Refer to project documentation for governance principles as they are
+established.
 
 ## Key Constraints
 
@@ -108,6 +117,7 @@ Refer to project documentation for governance principles as they are established
 ## Common Tasks
 
 ### Adding a new feature
+
 1. Create specification in `specs/` directory (create if it doesn't exist)
 2. Update `plan.md` and `tasks.md`
 3. Write tests first (TDD approach)
@@ -118,6 +128,7 @@ Refer to project documentation for governance principles as they are established
 8. Format: `deno fmt`
 
 ### Fixing a bug
+
 1. Write a failing test that reproduces the bug
 2. Fix the bug
 3. Verify test passes
@@ -129,11 +140,14 @@ Refer to project documentation for governance principles as they are established
 - `README.md`: Main documentation describing the project vision and architecture
 - `.github/`: GitHub configuration including workflows and templates
 
-**Note**: This project is in early stages. Files referenced in README.md like `mod.ts`, `src/`, `tests/`, and specification directories will be created as development progresses.
+**Note**: This project is in early stages. Files referenced in README.md like
+`mod.ts`, `src/`, `tests/`, and specification directories will be created as
+development progresses.
 
 ## Migration Context
 
 This project migrated from Node.js/npm to Deno on 2025-10-15 to:
+
 - Eliminate npm security vulnerabilities
 - Remove dependency management complexity
 - Simplify development with built-in tools
